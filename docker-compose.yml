@@ -74,7 +74,7 @@ services:
 
   # Grafana for data visualization
   grafana:
-    image: grafana/grafana:latest
+    image: grafana/grafana:10.2.3
     container_name: cybersecurity-grafana
     environment:
       - GF_SECURITY_ADMIN_PASSWORD=admin
@@ -93,7 +93,7 @@ services:
 
   # Prometheus for metrics collection
   prometheus:
-    image: prom/prometheus:latest
+    image: prom/prometheus:v2.47.0
     container_name: cybersecurity-prometheus
     ports:
       - "9090:9090"
