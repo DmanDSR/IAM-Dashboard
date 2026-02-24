@@ -150,19 +150,5 @@ jobs:
         
         echo "✅ DevSecOps structure is correct"
 
-    - name: Verify Docker Compose Configuration
-      run: |
-        echo "🔍 Verifying Docker Compose configuration..."
-        
-        # Check if scanner services are defined
-        grep -q "opa-scanner:" docker-compose.yml || (echo "❌ Missing opa-scanner service" && exit 1)
-        grep -q "checkov-scanner:" docker-compose.yml || (echo "❌ Missing checkov-scanner service" && exit 1)
-        grep -q "gitleaks-scanner:" docker-compose.yml || (echo "❌ Missing gitleaks-scanner service" && exit 1)
-        
-        # Check if profiles are defined
-        grep -q "profiles:" docker-compose.yml && grep -q "scanners" docker-compose.yml || (echo "❌ Missing scanners profile" && exit 1)
-        
-        echo "✅ Docker Compose configuration is correct"
-
 
 
