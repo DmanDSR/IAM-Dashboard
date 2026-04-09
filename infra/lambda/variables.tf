@@ -101,14 +101,7 @@ variable "s3_bucket_name" {
   default     = "iam-dashboard-project"
 }
 
-variable "dynamodb_remediation_jobs_table_name" {
-  description = "Name of the DynamoDB table for remediation jobs"
+variable "session_table_name" {
+  description = "Name of the DynamoDB table for auth sessions"
   type        = string
-  default     = "iam-dashboard-remediation-jobs"
-}
-
-variable "dynamodb_remediation_idempotency_table_name" {
-  description = "Name of the DynamoDB table for remediation idempotency mappings"
-  type        = string
-  default     = "iam-dashboard-remediation-idempotency"
 }

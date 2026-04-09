@@ -80,9 +80,7 @@ resource "aws_lambda_function" "scanner" {
         S3_BUCKET_NAME      = var.s3_bucket_name
         PROJECT_NAME        = var.project_name
         ENVIRONMENT         = var.environment
-        AI_REMEDIATION_USE_DYNAMODB = "true"
-        DYNAMODB_REMEDIATION_JOBS_TABLE = var.dynamodb_remediation_jobs_table_name
-        DYNAMODB_REMEDIATION_IDEMPOTENCY_TABLE = var.dynamodb_remediation_idempotency_table_name
+        SESSION_TABLE_NAME  = var.session_table_name
       }
     )
   }
